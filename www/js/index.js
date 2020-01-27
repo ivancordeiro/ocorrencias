@@ -39,7 +39,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        // app.carregar();
+        app.carregar();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -75,7 +75,6 @@ var conn = navigator.connection.type;
 // alert('conectado a internet com:' + conn );
 
 document.getElementById("boasvindas").style.display = "none";
-document.getElementById("cabecalho").style.display = "block";
 
 var altTela = parseInt( screen.height ) ;
 if( altTela != '' && altTela != 'undefined'  && altTela != 0 ){//3

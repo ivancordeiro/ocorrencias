@@ -39,7 +39,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        app.carregar();
+        //app.carregar();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -51,6 +51,8 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+		
+		app.carregar();
     },
 
 fechar: function() {
@@ -77,9 +79,9 @@ var conn = navigator.connection.type;
 document.getElementById("boasvindas").style.display = "none";
 
 var altTela = parseInt( screen.height ) ;
-if( altTela != '' && altTela != 'undefined'  && altTela != 0 ){//3
+if( altTela != '' && altTela != 'undefined'  && altTela != 0 && altTela != null ){//3
 //alert(altTela);
-document.getElementById("ifrBrowser").style.height = altTela - 70 +"px";
+document.getElementById("ifrBrowser").style.height = altTela - 1 +"px";
 }//3
 
 //alert( 'urlBrow: ' + urlBrow );

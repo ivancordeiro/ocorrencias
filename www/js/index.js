@@ -22,17 +22,24 @@ urlBrow = 'https://ivanprogramador.com.br/teste/ocorrencias/';
 
 
 var app = {
+    // Application Constructor
     initialize: function() {
         this.bindEvents();
     },
-
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        app.carregar();
+        // app.carregar();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -46,11 +53,43 @@ var app = {
         console.log('Received Event: ' + id);
     },
 
+fechar: function() {
+
+//alert('fechar');
+navigator.app.exitApp();
+
+},
 
 	carregar: function() {//1
 
-location.href =  urlBrow; 
-  
+//alert('carregar');
+
+//cordova.InAppBrowser.open(encodeURI(urlBrow), '_system', 'location=no,hidden=no');
+
+var conn = navigator.connection.type;
+
+///////////////////// if( conn == 'none' || conn == 'NONE' ){ //2
+///////////////////// alert('O aplicativo nao detectou conexao com internet!');
+///////////////////// } else {//2
+
+// alert('conectado a internet com:' + conn );
+
+document.getElementById("boasvindas").style.display = "none";
+document.getElementById("cabecalho").style.display = "block";
+
+var altTela = parseInt( screen.height ) ;
+if( altTela != '' && altTela != 'undefined'  && altTela != 0 ){//3
+//alert(altTela);
+document.getElementById("ifrBrowser").style.height = altTela - 70 +"px";
+}//3
+
+//alert( 'urlBrow: ' + urlBrow );
+ifrBrowser.location.href =  urlBrow; 
+
+
+///////////////////// }//2
+
+	   
     }//1
 
 

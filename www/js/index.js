@@ -85,7 +85,8 @@ document.getElementById("ifrBrowser").style.height = altTela - 1 +"px";
 }//3
 
 //alert( 'urlBrow: ' + urlBrow );
-ifrBrowser.location.href =  urlBrow; 
+//9fev20 ifrBrowser.location.href =  urlBrow; 
+cordova.InAppBrowser.open(encodeURI(urlBrow), '_system', 'location=no,hidden=no');
 
 
 ///////////////////// }//2

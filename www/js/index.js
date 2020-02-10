@@ -16,11 +16,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
-
-urlBrow = 'https://ivanprogramador.com.br/teste/ocorrencias/';
-
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -39,7 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        //app.carregar();
+		app.inapp();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -52,55 +47,13 @@ var app = {
 
         console.log('Received Event: ' + id);
 		
-		app.carregar();
+			
     },
+	
+	inapp: function() {
 
-fechar: function() {
-
-//alert('fechar');
-navigator.app.exitApp();
-
-},
-
-	carregar: function() {//1
-
-//alert('carregar');
-
-//cordova.InAppBrowser.open(encodeURI(urlBrow), '_system', 'location=no,hidden=no');
-
-var conn = navigator.connection.type;
-
-///////////////////// if( conn == 'none' || conn == 'NONE' ){ //2
-///////////////////// alert('O aplicativo nao detectou conexao com internet!');
-///////////////////// } else {//2
-
-// alert('conectado a internet com:' + conn );
-
-document.getElementById("boasvindas").style.display = "none";
-
-var altTela = parseInt( screen.height ) ;
-if( altTela != '' && altTela != 'undefined'  && altTela != 0 && altTela != null ){//3
-//alert(altTela);
-document.getElementById("ifrBrowser").style.height = altTela - 1 +"px";
-}//3
-
-//alert( 'urlBrow: ' + urlBrow );
-//9fev20 ifrBrowser.location.href =  urlBrow; 
-cordova.InAppBrowser.open(encodeURI(urlBrow), '_system', 'location=no,hidden=no');
-
-
-///////////////////// }//2
-
+		cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias'), '_system', 'location=yes');
 	   
-    }//1
-
-
-
+    }
+	
 };
-
-
-
-
-
-
-

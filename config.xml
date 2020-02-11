@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="ocorrencias.br.com.ivanprogramador" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-   <name>Registro de ocorrências</name>
+    <name>Registro de ocorrências</name>
     <description>
 Registro de ocorrências
     </description>
@@ -8,13 +8,8 @@ Registro de ocorrências
         Ivan Programador
     </author>
     <content src="index.html" />
-
     <preference name="DisallowOverscroll" value="true" />
-     <preference name="android-minSdkVersion" value="14" /> 
-	 <!--  <preference name="android-minSdkVersion" value="26" /> --> <!-- android 8-->
-	  <!-- <preference name="android-minSdkVersion" value="28" /> --> <!-- android 9-->
-
-
+    <preference name="android-minSdkVersion" value="14" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0" />
@@ -25,12 +20,7 @@ Registro de ocorrências
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
-
-
     <plugin name="cordova-plugin-inappbrowser" spec="~2.0.2" />
-    <plugin name="cordova-plugin-whitelist" spec="~1.2.2" />
-
-
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
@@ -51,42 +41,25 @@ Registro de ocorrências
         <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     </platform>
-
-   
-
-
-
-<allow-navigation href="http://ivanprogramador.com.br/*" />
-<allow-navigation href="https://ivanprogramador.com.br/*" />
-
-
-<allow-intent href="http://ivanprogramador.com.br/*" />
-<allow-intent href="https://ivanprogramador.com.br/*" />
-
-
-<access origin="http://ivanprogramador.com.br" />
-<access origin="https://ivanprogramador.com.br" />
-
-  
-  <access origin="*" />
+    <allow-navigation href="http://ivanprogramador.com.br/*" />
+    <allow-navigation href="https://ivanprogramador.com.br/*" />
+    <allow-intent href="http://ivanprogramador.com.br/*" />
+    <allow-intent href="https://ivanprogramador.com.br/*" />
+    <access origin="http://ivanprogramador.com.br" />
+    <access origin="https://ivanprogramador.com.br" />
+    <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-
-
-
-
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-
-
+    <plugin name="cordova-plugin-whitelist" spec="~1.2.2" />
 </widget>
